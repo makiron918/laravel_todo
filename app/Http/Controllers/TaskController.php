@@ -2,12 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Task;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Repositories\TaskRepository;
 
 class TaskController extends Controller
 {
+    /**
+     * タスクリポジトリーインスタンス
+     *
+     * @var TaskRepository
+     */
+    protected $tasks;
     /**
      * 新しいコントローラインスタンスの生成
      *
@@ -25,7 +33,11 @@ class TaskController extends Controller
      */
     public function index(Request $request)
     {
-        return view('tasks.index');
+        $tasks = $request->user()->tasks()->get();
+
+        return view('tasks.index', [
+            'tasks' => $tasks,
+        ]);
     }
     /**
      * 新タスク作成
