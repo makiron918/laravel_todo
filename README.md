@@ -1,3 +1,11 @@
+
+## 概要
+タスクを登録・削除することができるTODOアプリ。
+
+## 実際の動作
+[![Image from Gyazo](https://i.gyazo.com/74ecd7e9c0c20924b80d843569811da3.gif)](https://gyazo.com/74ecd7e9c0c20924b80d843569811da3)
+
+
 <p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
 <p align="center">
